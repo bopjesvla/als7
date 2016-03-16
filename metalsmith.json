@@ -1,0 +1,18 @@
+{
+	"source": "src",
+	"destination": "dist",
+	"plugins": {
+		"metalsmith-drafts": true,
+		"metalsmith-markdown": true,
+		"metalsmith-permalinks": ":title",
+		"metalsmith-layouts": "handlebars",
+		"metalsmith-watch": {
+			"livereload": true,
+			"paths": {
+				"${source}/**/*": true,
+				"layouts/**/*": true,
+			}
+		},
+		"metalsmith-serve": true
+	}
+}
