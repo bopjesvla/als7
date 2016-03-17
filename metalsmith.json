@@ -2,17 +2,31 @@
 	"source": "src",
 	"destination": "dist",
 	"plugins": {
-		"metalsmith-drafts": true,
-		"metalsmith-markdown": true,
-		"metalsmith-permalinks": ":title",
-		"metalsmith-layouts": "handlebars",
 		"metalsmith-watch": {
-			"livereload": true,
 			"paths": {
-				"${source}/**/*": true,
-				"layouts/**/*": true,
+				"+(src|layouts|partials)/**/*": true
 			}
 		},
-		"metalsmith-serve": true
+		"metalsmith-serve": true,
+		"metalsmith-drafts": true,
+		"metalsmith-collections": {
+			"posts": {
+				"pattern": "posts/*.md"
+			}
+		},
+		"metalsmith-markdown": true,
+		"metalsmith-filemetadata": [
+			{
+				"pattern": "**/*",
+				"metadata": {"layout": "layout.html"}
+			}
+		],
+		"metalsmith-layouts": {
+			"engine": "handlebars",
+			"partials": "partials"
+		},
+		"metalsmith-register-helpers": {
+			"directories": "helpers"
+		}
 	}
 }
