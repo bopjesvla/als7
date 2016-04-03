@@ -1,0 +1,50 @@
+mixin navlink(label, link)
+	a(href=link)= label
+
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+			
+		block title
+			title= titel + " - als zeven"
+		
+		link(rel='stylesheet' href='/semantic/semantic.min.css')
+		link(rel='stylesheet' href='/style.css')
+		link(rel="stylesheet" href="https://file.myfontastic.com/dbcFmgJzwdJcvw3VNXQwc8/icons.css")
+		link(rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32")
+		link(rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16")
+		script(src='/bundle.js')
+	body
+		.container
+			block nav
+				nav
+					.menu
+						a.basic(href="/")
+							.als als&nbsp;
+							| zeven
+						|  (
+						+navlink("forum", "http://forum.als7.nl")
+						| , 
+						+navlink("bundels", "/bundels")
+						| , 
+						//- +navlink("mensen", "/door")
+						//- | , 
+						a.contact(data-clipboard-text="contact@als7.nl") e-mail
+						| )
+					.subtitle
+						a.basic(href="/") zeven zeven zeven zeven, zeven zeven
+					.subtitle
+						a.basic(href="/") zeven zeven zeven, zeven zeven zevend
+			block content
+				- post = locals
+				if titel
+					header
+						h1.small= titel
+						.meta.top
+							include meta/datum
+				| !{contents}
+				.meta.compact.padded
+					include meta/door
+					include meta/deel
+					include meta/bewerkt

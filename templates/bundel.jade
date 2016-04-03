@@ -1,0 +1,17 @@
+extends page
+
+block header
+	header
+		h1= tag
+		- post = bundels[tag]
+		.meta.compact
+			include meta/door
+			include meta/datum
+
+block pages
+	- counter = pagination.files[0].counter
+	- bundel = bundels[tag]
+	for deel in pagination.files
+		h2
+			a(href="/" + deel.path)= (counter ? deel.deel + ". " : "") + (deel.titel || "")
+		| !{deel.article}

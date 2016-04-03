@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	h1 Mensen
+	for oeuvre in pagination.files
+		h2
+			a(href="/door/" + oeuvre[0].doorUrlSafe)= oeuvre[0].door

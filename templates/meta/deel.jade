@@ -1,0 +1,9 @@
+if post.bundel && post.deel
+	//- bugs bugs bugs
+	unless Array.isArray(post.bundel)
+		- post.bundelUrlSafe = [slug(post.bundel, {lower: true})]
+		- post.bundel = [post.bundel]
+	.deel
+		for bundel, index in post.bundel
+			| deel #{post.deel} van 
+			a(class="bundel" href="/bundels/" + post.bundelUrlSafe[index] )= bundel

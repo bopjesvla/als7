@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "node watch.js"
+    "s": "coffee serve.coffee"
   },
   "repository": {
     "type": "git",
@@ -18,16 +18,36 @@
   },
   "homepage": "https://github.com/bopjesvla/als7#readme",
   "dependencies": {
+    "alertify.js": "^1.0.10",
+    "clipboard": "^1.5.9",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.10.0",
+    "gaze": "^1.0.0",
     "handlebars": "^4.0.5",
+    "jade": "^1.11.0",
+    "lodash": "^4.6.1",
     "metalsmith": "^2.1.0",
+    "metalsmith-branch": "0.0.4",
     "metalsmith-collections": "^0.7.0",
+    "metalsmith-default-values": "0.0.2",
     "metalsmith-drafts": "0.0.1",
+    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-in-place": "^1.4.3",
+    "metalsmith-jade": "^2.0.2",
     "metalsmith-layouts": "^1.6.4",
     "metalsmith-loader": "^0.1.1",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-moment": "^1.0.0",
+    "metalsmith-pagination": "^1.4.0",
     "metalsmith-permalinks": "^0.5.0",
-    "metalsmith-register-helpers": "^0.1.2",
-    "metalsmith-serve": "0.0.7",
-    "metalsmith-watch": "^1.0.1"
+    "metalsmith-simplewatch": "herrkris/metalsmith-simplewatch",
+    "metalsmith-stylus": "^2.0.0",
+    "metalsmith-tags": "^1.2.1",
+    "metalsmith-uncss": "^0.2.0",
+    "metalsmith-webpack": "^1.0.3",
+    "metalsmith-webpack-dev-server": "^1.0.0",
+    "moment": "^2.12.0",
+    "semantic-ui": "^2.1.8",
+    "webpack": "^1.12.14"
   }
 }

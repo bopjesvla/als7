@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1 Bundels &amp; Boeken
+	
+	for boek in pagination.files
+		h2
+			a(href="/bundels/" + boek.urlSafe)= boek.naam
+		.meta.compact
+			- post = boek
+			include meta/door
+			include meta/datum

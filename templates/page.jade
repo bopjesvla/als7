@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	block title
+		title= tag + " - als zeven"
+	block header
+		header
+			h1.large= tag
+	block pages
+		for post in pagination.files
+			h2
+				a(href="/" + post.path)= post.titel
+			.meta.compact
+				include meta/datum
+				include meta/door
+				include meta/deel
