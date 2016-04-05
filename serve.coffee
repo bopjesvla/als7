@@ -132,7 +132,7 @@ build = =>
 						naam: naam
 						door: _(boek).map(_.property "door").flatten().uniq().value()
 						doorUrlSafe: _(boek).map(_.property "doorUrlSafe").flatten().uniq().value()
-						datum: _(boek).map(_.property "datum").max()
+						# datum: _(boek).map(_.property "datum").max()
 				mensenArray: (d) -> _.map d.mensen, (e, i) ->
 					_.extend e, naam: i
 		.use pagination
@@ -166,6 +166,9 @@ build = =>
 		# 	css: ["semantic/semantic.min.css"]
 		# 	html: ["pages/*.html", "*.html"]
 		# 	output: "style.css"
+		.use alias()
+		.use sitemap hostname: "https://als7.nl"
+		.use assets()
 		.destination './dist'
 		.metadata { _, slug, moment }
 		# .use autoValues
@@ -177,4 +180,4 @@ simplewatch
 	buildFn: build
 	buildPath: __dirname + '/dist'
 	srcPath: __dirname
-	pattern: "{src,templates}/**/*"
+	pattern: "{src,templates,public}/**/*"

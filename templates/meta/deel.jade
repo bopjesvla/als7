@@ -1,8 +1,8 @@
 if post.bundel && post.deel
 	//- bugs bugs bugs
 	unless Array.isArray(post.bundel)
-		- post.bundelUrlSafe = [slug(post.bundel, {lower: true})]
 		- post.bundel = [post.bundel]
+	- post.bundelUrlSafe = [slug(post.bundel, {lower: true})]
 	.deel
 		for bundel, index in post.bundel
 			| deel #{post.deel} van 

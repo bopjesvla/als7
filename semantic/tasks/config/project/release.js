@@ -14,10 +14,10 @@ var
          Derived Values
 *******************************/
 
-try {
+// try {
   config = requireDotFile('semantic.json');
-}
-catch(error) {}
+// }
+// catch(error) {}
 
 
 try {

@@ -2,7 +2,7 @@ extends page
 
 block header
 	header
-		h1= tag
+		h1.bundel= tag
 		- post = bundels[tag]
 		.meta.compact
 			include meta/door
@@ -12,6 +12,6 @@ block pages
 	- counter = pagination.files[0].counter
 	- bundel = bundels[tag]
 	for deel in pagination.files
-		h2
-			a(href="/" + deel.path)= (counter ? deel.deel + ". " : "") + (deel.titel || "")
+		h2.bundel
+			a.basic(href="/" + deel.path)= (counter ? deel.deel + ". " : "") + (deel.titel || "")
 		| !{deel.article}

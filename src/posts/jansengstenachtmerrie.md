@@ -1,14 +1,14 @@
 ---
 
 titel: Jans Engste Nachtmerrie
-datum: 2016-04-03
-bundel: Verzamelde Werken
+datum: 2016-04-02
+bundel: Hallo Stoeptegel
 door: Bob de Ruiter
 deel: 1
 
 ---
 
-Jan is een privédetective in zijn engste nachtmerrie. “Blijf staan, schurk,” roept Jan. “Halt. Stop. Ik weet alles over het voederen.”
+Jan is een privé-detective in zijn engste nachtmerrie. “Blijf staan, schurk,” roept Jan. “Halt. Stop. Ik weet alles over het voederen.”
 
 De dierentuinmedewerker kijkt verschrikt omhoog. “Wat doet u daar? Het is na sluitingstijd.”
 
