@@ -42,11 +42,11 @@ h1.small {
 h1 {
   margin-bottom: 3px;
 }
-h1.bundel {
-  font-size: 2.2rem !important;
-}
 h2 {
   margin-bottom: 0;
+}
+h2.bundel {
+  font-weight: normal;
 }
 .meta {
   text-transform: lowercase;
