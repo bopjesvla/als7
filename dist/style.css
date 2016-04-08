@@ -1,5 +1,5 @@
 body {
-  min-width: 840px;
+  min-width: 820px;
   overflow-x: scroll;
 }
 a.basic {
@@ -81,4 +81,7 @@ h2.bundel {
   font-family: "Helvetica Neue", Arial;
   top: 10px;
   right: 10px;
+}
+#nodebb .topic-profile-pic {
+  margin-left: 25px !important;
 }
